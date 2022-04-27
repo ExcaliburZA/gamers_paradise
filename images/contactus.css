@@ -1,0 +1,118 @@
+/* GRID CODE REFERENCED FROM
+https://www.youtube.com/watch?v=68O6eOGAGqA
+*/
+.header {
+  color: red;
+  height: 70px;
+  text-align: center;
+  font-family: cursive;
+}
+
+nav {
+  font-size: xx-large;
+  font-weight: bolder;
+  background: black;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: nav;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+  float: right;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  font-size: large;
+  font-family: fantasy;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-columns: 0.2fr 1fr 1fr 1fr 0.2fr;
+      grid-template-columns: 0.2fr 1fr 1fr 1fr 0.2fr;
+  -ms-grid-rows: 0.3fr 2fr;
+      grid-template-rows: 0.3fr 2fr;
+      grid-template-areas: "nav nav nav nav nav"
+ "..... gameinfo gameinfo gameinfo .....";
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#frmContactUs {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  margin: auto;
+  background: black;
+  border: 3px solid white;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: gameinfo;
+}
+
+#frmContactUs button {
+  color: crimson;
+  font-size: x-large;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 45px;
+  padding-right: 45px;
+  font-family: fantasy;
+}
+
+#frmContactUs input {
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  width: 315px;
+}
+
+#frmContactUs h1 {
+  font-family: fantasy;
+  font-size: xx-large;
+  color: red;
+}
+
+#btnSubmit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: x-large;
+  color: aqua;
+}
+
+#frmNewsletter {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  margin-left: 600px;
+  margin-right: 600px;
+  background: black;
+  border: 3px solid white;
+}
+
+#frmNewsletter label {
+  color: white;
+  font-size: x-large;
+}
+
+#frmNewsletter button {
+  background-color: red;
+  color: white;
+}
+
+footer {
+  text-align: center;
+}
+/*# sourceMappingURL=contactus.css.map */
