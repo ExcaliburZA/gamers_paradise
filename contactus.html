@@ -1,0 +1,82 @@
+<!doctype html> 
+
+<html lang="en">
+        <!--external scripts and file references-->
+    <head>
+        <title>Gamer's Utopia</title>
+
+        <link rel="stylesheet" href = "../css/contactus.css" type = "text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script type='text/javascript' src='../js/hobby.js'></script>
+        <script type='text/javascript' src='../js/hobby_mk2.js'></script>
+
+    </head>
+
+    <!--setting a background image for the page-->
+    <body style="background-image: url(../images/icons.jpg); " onload="OnLoadContactUs()">
+
+        <!--container class that will form a box around the nested page elements in order to style and position them-->
+        <div class="container">   
+            <!--banner and navigation bar for the website that links to other pages and some useful external links. Navigation links are stored in an unordered list-->
+            <nav class="header">Gamer's Utopia
+                <ul>
+                    <li id="homeRedirect"><a href="../index.html">Home</a></li>
+                    <li id="steamRedirect"><a href="https://store.steampowered.com/">Steam</a></li>
+                    <li id="rgamingRedirect"><a href="https://www.reddit.com/r/gaming/">r/gaming Subreddit</a></li>
+                    <li id="aboutMeRedirect"><a href="about-me.html">About me</a></li>
+                    <li id="videoRedirect"><a href="video.html">Trailer - Rust</a></li>
+                    <li id="savedRedirect"><a href="saveforlater.html">View Saved</a></li>
+                    <li id="contactRedirect"><a href="contactus.html">Contact Us</a></li>
+
+                </ul>
+            </nav>
+
+            <form id="frmContactUs" style="display: block; align-items: center; text-align: center; padding: 40px; margin: auto; width: 700px;">
+                <h1 id="contactFormHeading">Get in touch with us!</h1>
+                <div id="inputsDiv">
+                    <input id="inName" placeholder="Full name"><br>
+                    <input id="inEmail" placeholder="Email address"><br>
+                    <input id="inPhone" placeholder="Full name"><br>
+                    <textarea id="txtMsg" rows="5" cols="40"></textarea><br>   
+                    <div id="dropdownDiv" style="margin-bottom: 15px; margin-top: 10px;">
+    
+                    </div>           
+                    <button id="btnSubmit" onclick="SubmitDetails()">Submit</button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <br><br><br>
+
+        <!--form that prompts the user for their email address and allows them to select whether they would like to receive marketting emails or not before submitting their email-->
+        <form id="frmNewsletter" style="margin-bottom: 20px;">
+            
+                <p style="font-weight: bold; font-family: fantasy; margin-top: 3px; font-size: xx-large; color: white;">Subscribe to our newsletter!</p>
+                <p style="font-style: cursive; color: white;">Would you like to receive marketing emails?</p>
+
+                <!--labels for the radio buttons indicating which is which-->
+                <label id="lblMarketingNo" for="marketingNo">No</label>
+                <input id="marketingNo" type="radio" name="marketing" value="no" style="color: white;"><br>
+
+                <label id="lblMarketingYes" for="marketingYes">Yes</label>
+                <input id="marketingYes" type="radio" name="marketing" value="yes" style="color: white;"><br>               
+
+            <div style="margin-bottom: 10px;">
+                <input id="emailInput" placeholder="someone@example.com">
+                <button id="btnSubmit">Subscribe</button>
+            </div>
+            
+        </form>
+
+    </body>
+
+    <!--footer containing a quote from a famous game designer-->
+    <footer class="centeredFooter" style="background-color: whitesmoke; font-size: x-large; border: 3px solid orangered; padding: 10px;">
+            "A game is the complete exploration of freedom within a restrictive environment."
+            - Vineet Raj Kapoor.
+    </footer>
+</html>

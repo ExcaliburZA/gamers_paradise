@@ -1,0 +1,122 @@
+
+//variable declarations
+
+/* GRID CODE REFERENCED FROM
+https://www.youtube.com/watch?v=68O6eOGAGqA
+*/
+
+.header{
+    color: red;
+    height: 70px;
+    text-align: center;
+    font-family: cursive;
+}
+
+//class for the navigation menu that styles and positions it and any list items contained within it 
+nav{
+    font-size: xx-large;
+    font-weight: bolder;
+    background: black;
+
+    grid-area: nav;
+    align-self: center;
+
+        li{
+            display: inline;
+            list-style-type: none;
+            float: right;
+            padding-right: 15px;
+            padding-bottom: 20px;
+            font-size: large;
+            font-family: fantasy;
+        }
+}
+
+//container class that will be used to divide and allocate screen space to different elements on the page in order to style and position them
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.2fr 1fr 1fr 1fr 0.2fr;
+    grid-template-rows: 0.3fr 2fr ;
+
+    grid-template-areas: 
+    "nav nav nav nav nav"
+    "..... gameinfo gameinfo gameinfo ....."
+    
+}
+
+
+//settings for the background image of the page
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#frmContactUs
+{
+    align-self: center;
+    text-align: center;   
+    margin: auto;
+    background: black;
+    border: 3px solid white;
+    grid-area: gameinfo;
+
+    button
+    {
+        color: crimson;
+        font-size: x-large;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 45px;
+        padding-right: 45px;;
+        font-family: fantasy;
+    }
+
+    input
+    {
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        width: 315px;
+    }
+
+    h1
+    {
+        font-family: fantasy;
+        font-size: xx-large;
+        color: red;
+    }
+}
+
+#btnSubmit
+{
+    width: fit-content;
+    font-size: x-large;
+    color: aqua;
+}
+
+//class for our newsletter subscription form that styles and positions it and any labels in it 
+#frmNewsletter{
+    align-self: center;
+    text-align: center;   
+    margin-left: 600px;
+    margin-right: 600px;
+    background: black;
+    border: 3px solid white;
+
+    label
+    {
+        color: white;
+        font-size: x-large;
+    }
+
+    button
+    {
+        background-color: red;
+        color: white;
+    }
+}
+
+//class for the page footer that formats it
+footer{
+    text-align: center;
+}

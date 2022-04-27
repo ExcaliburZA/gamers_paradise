@@ -1,0 +1,183 @@
+/* GRID CODE REFERENCED FROM
+https://www.youtube.com/watch?v=68O6eOGAGqA
+*/
+.header {
+  color: red;
+  height: 70px;
+  text-align: center;
+  font-family: cursive;
+}
+
+nav {
+  font-size: xx-large;
+  font-weight: bolder;
+  background: black;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-area: nav;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+  float: right;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  font-size: large;
+  font-family: fantasy;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 0.3fr 0.5fr 1.4fr;
+      grid-template-rows: 0.3fr 0.5fr 1.4fr;
+      grid-template-areas: "nav nav nav nav nav nav" "..... rust csgo minecraft gta ....." "..... gameinfo gameinfo gameinfo gameinfo .....";
+}
+
+#frmComments {
+  margin-top: 20px;
+  border: 5px solid orangered;
+}
+
+#gameInfoBox {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-area: gameinfo;
+  background-color: white;
+  background: white;
+  border: 5px solid orangered;
+  font-family: cursive;
+  font-size: medium;
+  word-wrap: break-word;
+}
+
+#gameInfoBox p {
+  margin-left: 6px;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.game-image {
+  width: 100%;
+  height: 100px;
+  max-width: 150px;
+  max-height: 150px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+/*CODE REFERENCED FROM
+https://www.w3schools.com/howto/howto_css_zoom_hover.asp */
+.game-image:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  opacity: 0.7;
+}
+
+table {
+  text-align: center;
+  border: 2px solid black;
+  margin-left: 20px;
+  font-size: large;
+}
+
+table tr {
+  text-align: center;
+}
+
+table td {
+  word-wrap: break-word;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+#rust {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: rust;
+}
+
+#csgo {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: csgo;
+}
+
+#minecraft {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: minecraft;
+}
+
+#gta {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+  grid-area: gta;
+}
+
+#gameDescHeading {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 7px;
+}
+
+#btnSubmit {
+  background-color: red;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 5px;
+}
+
+form {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  margin-left: 900px;
+  margin-right: 900px;
+  background: black;
+  border: 3px solid white;
+}
+
+form label {
+  color: white;
+  font-size: x-large;
+}
+
+footer {
+  text-align: center;
+}
+
+#buttonsDiv button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 5px 5px 5px;
+  height: 30px;
+  font-family: cursive;
+}
+
+.comment-style {
+  font: large;
+  font-family: cursive;
+  margin-left: 10px;
+  float: left;
+  border: 2px solid goldenrod;
+  margin: 6px;
+}
+/*# sourceMappingURL=hobby.css.map */

@@ -1,0 +1,113 @@
+/* GRID CODE REFERENCED FROM
+https://www.youtube.com/watch?v=68O6eOGAGqA
+*/
+.header {
+  color: red;
+  height: 70px;
+  text-align: center;
+  font-family: cursive;
+}
+
+nav {
+  font-size: xx-large;
+  font-weight: bolder;
+  background: black;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: nav;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+  float: right;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  font-size: large;
+  font-family: fantasy;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-columns: 0.2fr 1fr 1fr 1fr 0.2fr;
+      grid-template-columns: 0.2fr 1fr 1fr 1fr 0.2fr;
+  -ms-grid-rows: 0.3fr 2fr;
+      grid-template-rows: 0.3fr 2fr;
+      grid-template-areas: "nav nav nav nav nav" "..... gameinfo gameinfo gameinfo .....";
+}
+
+#gameInfoBox {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: gameinfo;
+  background-color: white;
+  background: white;
+  border: 5px solid orangered;
+  font-family: cursive;
+  font-size: medium;
+  word-wrap: break-word;
+}
+
+#gameInfoBox p {
+  margin-left: 6px;
+  margin-bottom: 15px;
+  margin-top: 6px;
+}
+
+.paragraph-hover {
+  font-size: medium;
+}
+
+.paragraph-hover p:hover:before {
+  font-size: large;
+  color: lightseagreen;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#gameDescHeading {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 7px;
+}
+
+#btnSubmit {
+  background-color: red;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 5px;
+}
+
+form {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  margin-left: 600px;
+  margin-right: 600px;
+  background: black;
+  border: 3px solid white;
+}
+
+form label {
+  color: white;
+  font-size: x-large;
+}
+
+footer {
+  text-align: center;
+}
+/*# sourceMappingURL=saveforlater.css.map */

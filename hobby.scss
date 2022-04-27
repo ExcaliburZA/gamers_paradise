@@ -1,0 +1,187 @@
+
+//variable declarations
+
+/* GRID CODE REFERENCED FROM
+https://www.youtube.com/watch?v=68O6eOGAGqA
+*/
+
+.header{
+    color: red;
+    height: 70px;
+    text-align: center;
+    font-family: cursive;
+}
+
+//class for the navigation menu that styles and positions it and any list items contained within it 
+nav{
+    font-size: xx-large;
+    font-weight: bolder;
+    background: black;
+
+    grid-area: nav;
+    align-self: center;
+
+        li{
+            display: inline;
+            list-style-type: none;
+            float: right;
+            padding-right: 15px;
+            padding-bottom: 20px;
+            font-size: large;
+            font-family: fantasy;
+        }
+}
+
+//container class that will be used to divide and allocate screen space to different elements on the page in order to style and position them
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 0.3fr 0.5fr 1.4fr ;
+
+    grid-template-areas: 
+    "nav nav nav nav nav nav"
+    "..... rust csgo minecraft gta ....."
+    "..... gameinfo gameinfo gameinfo gameinfo ....."
+    
+}
+
+#frmComments
+{
+    margin-top: 20px;
+    border: 5px solid orangered;
+}
+
+//wrapper class for the elements that will be used to display game information in order to format and style them
+#gameInfoBox{
+    grid-area: gameinfo;
+    background-color: white;
+    background: white;
+    border: 5px solid orangered;
+
+    font-family: cursive;
+    font-size: medium;
+    word-wrap: break-word;
+
+    p{
+        margin-left: 6px;
+    }
+}
+
+
+//settings for the background image of the page
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+//class for our game images that determines their size and fill mode
+.game-image{
+    width: 100%;
+    height: 100px;
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: fill;
+}
+
+/*CODE REFERENCED FROM
+https://www.w3schools.com/howto/howto_css_zoom_hover.asp */
+
+//triggers when a game icon is hovered over and enlarges it and lowers its opacity
+.game-image:hover{
+    transform: scale(1.15);
+    opacity: 0.7;
+}
+
+//class for the game information table that formats and styles both it and its rows and items
+table{
+    text-align: center;
+    border: 2px solid black;
+    margin-left: 20px;
+    font-size: large;
+
+        tr{
+            text-align: center;
+        }
+
+        td{
+            word-wrap: break-word;
+            border: 1px solid black;
+            padding: 5px;
+        }
+}
+
+//series of explicit classes that allocate each image an appropriate amount of screen space
+#rust{   
+    grid-area: rust;
+}
+
+#csgo{
+    grid-area: csgo;
+}
+
+#minecraft{
+    grid-area: minecraft;
+}
+
+#gta{
+    grid-area: gta;
+}
+
+//styling settings for the game description heading
+#gameDescHeading{
+    font-weight: bold; 
+    text-align: center;
+    margin-top: 7px;
+}
+
+//explicit class for the email submission button that styles and positions it 
+#btnSubmit{
+    background-color: red;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    align-self: center;
+    margin-top: 5px;
+}
+
+//class for our newsletter subscription form that styles and positions it and any labels in it 
+form{
+    align-self: center;
+    text-align: center;   
+    margin-left: 900px;
+    margin-right: 900px;
+    background: black;
+    border: 3px solid white;
+
+        label{
+            color: white;
+            font-size: x-large;
+        }
+}
+
+//class for the page footer that formats it
+footer{
+    text-align: center;
+}
+
+#buttonsDiv
+{
+    button
+    {
+        width: fit-content;
+        padding: 5px 5px 5px 5px;
+        height: 30px;
+        font-family: cursive;
+    }
+}
+
+.comment-style
+{
+    font: large;
+    font-family: cursive;
+    margin-left: 10px;
+    float: left;
+    border: 2px solid goldenrod;
+    margin: 6px;
+}
